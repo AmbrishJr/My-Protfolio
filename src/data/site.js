@@ -13,9 +13,8 @@ export const site = {
   email: 'ambrishs.aids2023@citchennai.net',
   phone: '+91 73973 01671',
 
-  // Path is relative to /public. Replace public/profile.svg with your own photo
-  // (e.g. add public/profile.jpg and set this to '/profile.jpg').
-  photo: '/profile.svg',
+  // Path is relative to /public. Cropped to 4:5 to match the hero portrait frame.
+  photo: '/profile.jpg',
   resume: '/resume.pdf',
 
   socials: [
