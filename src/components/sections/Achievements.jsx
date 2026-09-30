@@ -13,7 +13,7 @@ export default function Achievements() {
   return (
     <Section id="achievements">
       <SectionHeading
-        index={5}
+        index={6}
         title="Achievements & More"
         kicker="Contests, certs, community"
       />

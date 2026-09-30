@@ -119,46 +119,84 @@ export const experience = [
   },
 ]
 
+// Personal / open-source projects, sourced from github.com/AmbrishJr.
+// `link` always points straight at the GitHub repo.
+// TODO items below are placeholders — swap in the real one-liner + stack.
 export const projects = [
   {
-    name: 'Voko Run Club',
-    blurb:
-      'Dynamic website for a Chennai-based run club, built with reusable React components and smooth scroll-based transitions for an engaging, interactive experience.',
-    stack: ['React.js', 'Scroll animation', 'Responsive UI'],
-    link: 'https://www.vokoclub.in',
-    tag: 'Live site',
+    name: 'Concentration Tracker & Interview Cheating Detector',
+    blurb: 'TODO: add a one-line description for this project.',
+    stack: ['TODO: add tech stack'],
+    link: 'https://github.com/AmbrishJr/Conecntration-Tracker-and-Interview-Cheating-Detector-',
+    tag: 'Python',
   },
   {
-    name: 'Minaliya Oils',
-    blurb:
-      'Responsive corporate website designed, built, and deployed end to end on Next.js — modern UI, intuitive navigation, and full mobile responsiveness. Managed the project from requirements to launch.',
-    stack: ['Next.js', 'UI/UX', 'Deployment'],
-    link: 'https://www.minaliya.com',
-    tag: 'Live site',
-  },
-  {
-    name: 'Multimodal Edge AI — Visual Quality Inspection',
+    name: 'Anomaly Lens — Multimodal Edge AI for Visual Quality Inspection',
     blurb:
       'Edge-deployed visual inspection system detecting quality defects in real time with a lightweight computer-vision pipeline, plus a RAG-powered LLM reasoning layer over a vector DB that auto-generates root-cause analysis for each defect.',
     stack: ['OpenCV', 'Edge AI', 'RAG / Vector DB', 'LLM Reasoning', 'ML Pipeline'],
-    link: null,
-    tag: 'Project',
+    link: 'https://github.com/AmbrishJr/ANOMALY-LENS---Multimodal-Edge-AI-for-Visual-Quality-Inspection-with-RAG-Powered-Root-Cause-Analysis',
+    tag: 'Python',
+  },
+  {
+    name: 'SimCBAM — Photoacoustic Image Reconstruction for Blood Vessels',
+    blurb:
+      "A hybrid attention module for sparse-view photoacoustic tomography reconstruction of human blood vessels, built and evaluated across 15 U-Net variants — matching ~94% of CBAM's SSIM gain with a 95% parameter reduction.",
+    stack: ['PyTorch', 'U-Net', 'Attention Mechanisms', 'Image Reconstruction'],
+    link: 'https://github.com/AmbrishJr/SimCBAM-Photoacoustic-Image-Reconstruction-Model-for-Human-Blood-Vessel',
+    tag: 'Python',
+  },
+  {
+    name: 'AI Interview Assistant',
+    blurb: 'TODO: add a one-line description for this project.',
+    stack: ['TODO: add tech stack'],
+    link: 'https://github.com/AmbrishJr/AI-INTERVIEW-ASSISTANT',
+    tag: 'TypeScript',
   },
   {
     name: '3D Avatar Indian Sign Language Interpreter',
     blurb:
       'Web app that translates speech and text into Indian Sign Language using animated 3D avatars, with real-time translation and interactive learning modules — improving digital accessibility for the deaf community.',
     stack: ['React.js', 'Three.js', 'WebGL', 'Node.js', 'Express', 'MongoDB', 'ML'],
-    link: null,
-    tag: 'Project',
+    link: 'https://github.com/AmbrishJr/ISL-APP-WITH-3D-AVATAR-',
+    tag: 'JavaScript',
+  },
+  {
+    name: 'Drowsiness Detection System',
+    blurb: 'TODO: add a one-line description for this project.',
+    stack: ['TODO: add tech stack'],
+    link: 'https://github.com/AmbrishJr/Drowsiness-Detection-System',
+    tag: 'Python',
   },
   {
     name: 'Smart Attendance System — Face Recognition + RFID',
     blurb:
       'Hybrid attendance system combining facial recognition with RFID verification for accurate, tamper-resistant tracking. Haar Cascade + LBPH/FaceNet for detection and recognition, with a TensorFlow pipeline for training and inference.',
     stack: ['Python', 'OpenCV', 'Haar Cascade', 'LBPH', 'FaceNet', 'TensorFlow', 'NumPy'],
-    link: null,
-    tag: 'Project',
+    link: 'https://github.com/AmbrishJr/SMART-ATTENDENCE-SYSTEM-',
+    tag: 'Python',
+  },
+]
+
+// Client / freelance web development work.
+// `repoLink` is optional — leave it null for private repos.
+export const freelanceProjects = [
+  {
+    name: 'Minaliya Oils',
+    blurb:
+      'Responsive corporate website designed, built, and deployed end to end on Next.js — modern UI, intuitive navigation, and full mobile responsiveness. Managed the project from requirements to launch.',
+    stack: ['Next.js', 'UI/UX', 'Deployment'],
+    liveLink: 'https://www.minaliya.com',
+    repoLink: 'https://github.com/AmbrishJr/minaliya-website',
+  },
+  {
+    name: 'Voko Run Club',
+    blurb:
+      'Dynamic website for a Chennai-based run club, built with reusable React components and smooth scroll-based transitions for an engaging, interactive experience.',
+    stack: ['React.js', 'Scroll animation', 'Responsive UI'],
+    // TODO: confirm/replace live link
+    liveLink: 'https://www.vokoclub.in',
+    repoLink: null,
   },
 ]
 

@@ -2,7 +2,19 @@ import Section from '../ui/Section'
 import SectionHeading from '../ui/SectionHeading'
 import Reveal from '../ui/Reveal'
 import TiltCard from '../ui/TiltCard'
-import { projects } from '../../data/content'
+import { freelanceProjects } from '../../data/content'
+
+const ArrowIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path
+      d="M4 12L12 4M12 4H5M12 4V11"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
 
 const GitHubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -10,13 +22,17 @@ const GitHubIcon = () => (
   </svg>
 )
 
-export default function Projects() {
+export default function Freelance() {
   return (
-    <Section id="projects">
-      <SectionHeading index={4} title="GitHub Projects" kicker="Things I've built" />
+    <Section id="freelance">
+      <SectionHeading
+        index={5}
+        title="Freelance Web Development"
+        kicker="Client work, shipped"
+      />
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p, i) => (
+        {freelanceProjects.map((p, i) => (
           <Reveal key={p.name} delay={(i % 3) * 0.08}>
             <TiltCard className="flex h-full flex-col p-6">
               <div className="flex items-center justify-between gap-3">
@@ -24,7 +40,7 @@ export default function Projects() {
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="chip !text-[10px] uppercase tracking-widest">
-                  {p.tag}
+                  Client site
                 </span>
               </div>
 
@@ -39,17 +55,30 @@ export default function Projects() {
                 ))}
               </ul>
 
-              {p.link && (
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  data-cursor="pointer"
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink transition-colors hover:border-accent hover:text-accent"
-                >
-                  <GitHubIcon /> View Repo
-                </a>
-              )}
+              <div className="mt-6 flex flex-wrap gap-3">
+                {p.liveLink && (
+                  <a
+                    href={p.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-cursor="pointer"
+                    className="inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink transition-colors hover:border-accent hover:text-accent"
+                  >
+                    Visit <ArrowIcon />
+                  </a>
+                )}
+                {p.repoLink && (
+                  <a
+                    href={p.repoLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-cursor="pointer"
+                    className="inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink transition-colors hover:border-accent hover:text-accent"
+                  >
+                    <GitHubIcon /> Repo
+                  </a>
+                )}
+              </div>
             </TiltCard>
           </Reveal>
         ))}
